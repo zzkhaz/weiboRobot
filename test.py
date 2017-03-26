@@ -21,14 +21,14 @@ def get_access_token(app_key, app_secret, callback_url):
     return access_token, expires_in
 
 if __name__ == '__main__':
-    app_key = '2288083079'
-    app_secret = 'adda570146e57c54511153ef7b5167e3'
-    callback_url = 'https://api.weibo.com/oauth2/default.html'
+    app_key = '***'
+    app_secret = '***'
+    callback_url = '***'
 
     access_token, expires_in = get_access_token(app_key, app_secret, callback_url)
     # 上面的语句运行一次后，可保存得到的access token，不必每次都申请
-    #access_token = '2.00DurWzBnvYqUC7f70e6e887QWDoRB'
-    #expires_in = '1647774107'
+    #access_token = '***'
+    #expires_in = '***'
     client = APIClient(app_key=app_key, app_secret=app_secret, redirect_uri=callback_url)
     client.set_access_token(access_token, expires_in)
 	
